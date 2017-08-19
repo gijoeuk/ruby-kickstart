@@ -7,8 +7,6 @@
 
 class String
   def every_other_char
-      answer = String.new
-      self.chars.each_with_index{|letter, index| answer << letter if index % 2 == 0 }
-      answer
+      self.chars.select.with_index{|letter, index| index % 2 == 0 }.join
   end
 end
